@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>News Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+  </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- Image and text -->
+    <a class="navbar-brand" href="homepage.html">
+      <img src="data:image/png;base64,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" width="30" height="30" class="d-inline-block align-top" alt="">
+      Stockopedia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="newspage.html">News & updates</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                Features
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Learn about stock</a>
+                <a class="dropdown-item" href="financial dictionary.html">Financial dictionarry </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="quiz page.html">Quiz game</a>
+              </div>
+            </li>
+          <!-- <li class="nav-item">
+              <a class="nav-link disabled">Disabled</a>
+            </li>-->
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <div class="mx-2">
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#loginModal">Login</button>
+            <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#signupModal">SignUp</button>
+        </div>
+    </div>
+        </div>
+      </nav>
+       <!--Log In Modal -->
+      <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+              <h5 class="modal-title" id="loginModalLabel">Login to Stockopedia</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+              </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                      </div>
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Login</button>
+                    </form>
+              </div>
+              <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+          </div>
+          </div>
+      </div>
+       <!--Sign Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="signupModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+          <h5 class="modal-title" id="signupModalLabel">Get started with an Stockopedia Account</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+          </div>
+          <div class="modal-body">
+              <form>
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                  </div>
+                  <div class="form-group">
+                      <label for="cexampleInputPassword1">Confirm Password</label>
+                      <input type="password" class="form-control" id="cexampleInputPassword1">
+                    </div>  
+                  <div class="form-group form-check">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+          </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+      </div>
+      </div>
+  </div>
+  <div class="container mt-5">
+    <h1 class="text-center mb-5">Stock Market News</h1>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="data:image/png;base64,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" class="card-img-top" alt="News 1">
+          <div class="card-body">
+            <h5 class="card-title">Money controlnews</h5>
+            <p class="card-text">Get to know about the update around the world .</p>
+            <a href="https://www.moneycontrol.com/news/tags/dailyhunt.html" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <img src="https://logowik.com/content/uploads/images/tradingview3131.jpg" class="card-img-top" alt="News 2">
+          <div class="card-body">
+            <h5 class="card-title">TRADING VIEW</h5>
+            <p class="card-text">all insides about stock market. </p>
+            <a href="https://in.tradingview.com/" class="btn btn-primary">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="container">
+    <p class="float-right"><a href="#">Back to top</a></p>
+    <p>© 2023-2024 J.A.M.S, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+</footer>
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+-->
+</body>
+</html>
